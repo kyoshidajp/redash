@@ -208,7 +208,7 @@ class QueryEditor extends React.Component {
                 </button>
               </Tooltip>
               <select className="form-control datasource-small flex-fill w-100" onChange={this.props.updateDataSource} disabled={!this.props.isQueryOwner}>
-                {this.props.dataSources.map(ds => <option label={ds.name} value={ds.id} key={`ds-option-${ds.id}`}>{ds.name}</option>)}
+                {this.props.dataSources.map(ds => <option label={ds.name} value={ds.id} key={`ds-option-${ds.id}`} selected={ds.id === this.props.dataSource.id}>{ds.name}</option>)}
               </select>
               {this.props.canEdit ?
                 <Tooltip placement="top" title={modKey + ' + S'}>
